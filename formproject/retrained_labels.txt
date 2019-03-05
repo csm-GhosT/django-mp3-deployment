@@ -1,0 +1,6 @@
+ant
+butterfly
+centipede
+cockroach
+earthworms
+not insect

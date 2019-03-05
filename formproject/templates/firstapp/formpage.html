@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>formpage-</title>
+  <style media="screen">
+    input[type=file]{
+      background:black;
+      color:white;
+      /* height:40px; */
+      cursor:pointer;
+      border-radius:15px;
+    }
+    input[type=submit]
+    {
+      height:40px;
+      width:100px;
+      border-radius:15px;
+      background:black;
+      color:white;
+    }
+      input[type=submit]:hover
+      {
+        background:white;
+        color:black;
+      }
+      body{
+        background:#FBF4E5;
+
+      }
+  </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <center>
+        <h1>Upload Image</h1><br>
+
+        <form method="post" enctype="multipart/form-data">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="file" placeholder="Choose Image" name="document" accept="image/*">
+        <br>
+        <input type="submit" value="Upload">
+      </form>
+    </center>
+        {{form1}}
+    </div>
+  </body>
+</html>
